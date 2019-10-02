@@ -1,23 +1,36 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Recipe Detail</ion-title>
+    <ion-title>{{loadedRecipe.title}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <img src="./madison.jpg" />
-    <ion-card-header>
-      <ion-card-title>{{ recipeTitle }}</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
-    </ion-card-content>
-  </ion-card>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12" size-md="6" offset-md="3">
+        <ion-card>
+          <img [src]="loadedRecipe.image_url" />
+          <ion-card-header>
+            <ion-card-title>{{ loadedRecipe.title }}</ion-card-title>
+            <ion-card-subtitle>{{ loadedRecipe.description }}</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content>
+            <ion-list>
+              <ion-list-header color="secondary">
+                <ion-label>Bahan- Bahan</ion-label>
+              </ion-list-header>
+              <ion-item lines="full" *ngFor="let ingredient of loadedRecipe.ingredients">
+                <ion-icon slot="start" name="restaurant"></ion-icon>
+                <ion-label>{{ ingredient }}</ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

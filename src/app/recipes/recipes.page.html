@@ -1,18 +1,18 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-title>Recipes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item lines="full" *ngFor="let recipe of recipes" detail [routerLink]="['/recipe-detail', recipe.id, recipe.title]">
+    <ion-item lines="full" *ngFor="let recipe of recipes" detail [routerLink]="['/recipe-detail', recipe.id]">
       <ion-avatar slot="start">
         <img [src]="recipe.image_url" />
       </ion-avatar>
       <ion-label>
         <ion-text color="primary">
-          <h3>{{ recipe.title}}</h3>
+          <h2>{{ recipe.title}}</h2>
         </ion-text>
         <p>{{ recipe.description}}</p>
       </ion-label>
