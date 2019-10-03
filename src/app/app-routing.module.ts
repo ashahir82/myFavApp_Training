@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesPageModule' },
   // { path: 'recipe-detail/:recipeId/:recipeTitle', loadChildren: './recipe-detail/recipe-detail.module#RecipeDetailPageModule' },
   { path: 'recipe-detail/:recipeId', loadChildren: './recipe-detail/recipe-detail.module#RecipeDetailPageModule' },
+  { path: 'login', loadChildren: './auth/login/login.module#LoginPageModule' },
 ];
 
 @NgModule({
