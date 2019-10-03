@@ -1,9 +1,27 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>login</ion-title>
+    <ion-button slot="end" (click)="dismissModal()">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <form #form="ngForm" (ngSubmit)="login(form)">
+    <ion-item>
+      <ion-icon slot="start" name="mail"></ion-icon>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" name="key"></ion-icon>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <ion-button color="success" expand="block">
+      <ion-icon slot="start" name="log-in"></ion-icon>
+      Click me
+    </ion-button>
+  </form>
 </ion-content>

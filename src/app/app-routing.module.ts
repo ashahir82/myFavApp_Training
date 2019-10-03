@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'recipes', pathMatch: 'full' },
+  { path: '', redirectTo: 'landing', pathMatch: 'full' },
   { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   { path: 'recipes', loadChildren: './recipes/recipes.module#RecipesPageModule' },
   // { path: 'recipe-detail/:recipeId/:recipeTitle', loadChildren: './recipe-detail/recipe-detail.module#RecipeDetailPageModule' },
@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'login', loadChildren: './auth/login/login.module#LoginPageModule' },
   { path: 'register', loadChildren: './auth/register/register.module#RegisterPageModule' },
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardPageModule' },
+  { path: 'landing', loadChildren: './landing/landing.module#LandingPageModule' },
 ];
 
 @NgModule({

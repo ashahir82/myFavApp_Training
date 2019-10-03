@@ -1,0 +1,29 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <ion-img src="https://marvel-cdn.bc0a.com/Campbellsoup/s3.amazonaws.com/origin.www.cscassets.com/recipes/wide_cknew/wide_32.jpg"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+        <ion-card-title>Awesome Title</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button color="success" slot="start" expand="block" (click)="login()">
+          <ion-icon slot="start" name="log-in"></ion-icon>
+          Sign In
+        </ion-button>
+        <ion-button color="danger" slot="end" expand="block" [routerLink]="['/register']">
+          <ion-icon slot="start" name="create"></ion-icon>
+          Register
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
