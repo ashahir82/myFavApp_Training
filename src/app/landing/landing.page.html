@@ -12,15 +12,15 @@
   </ion-grid>
     <ion-card>
       <ion-card-header>
-        <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
-        <ion-card-title>Awesome Title</ion-card-title>
+        <ion-card-subtitle>Himpunan Resipi Makanan Asia Tenggara</ion-card-subtitle>
+        <ion-card-title color="tertiary">Resipi Nusantara</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <ion-button color="success" slot="start" expand="block" (click)="login()">
           <ion-icon slot="start" name="log-in"></ion-icon>
           Sign In
         </ion-button>
-        <ion-button color="danger" slot="end" expand="block" [routerLink]="['/register']">
+        <ion-button color="danger" slot="end" expand="block" (click)="register()">
           <ion-icon slot="start" name="create"></ion-icon>
           Register
         </ion-button>

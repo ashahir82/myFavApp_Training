@@ -18,7 +18,7 @@ export class AuthService {
   ) { }
 
   login(email:string, password:string) {
-    return this.http.post('http://recipes.test/api/auth/login', 
+    return this.http.post(this.env.API_URL + '/auth/login', 
     {email: email, password: password})
     .pipe(
       tap(
@@ -34,7 +34,13 @@ export class AuthService {
           this.isLoggedIn = true;
           return token;
         }
-      )
+      ),
+    );
+  }
+
+  register(fName: string, lName: string, email: string, password: string) {
+    return this.http.post(this.env.API_URL + '/auth/register',
+      { fName, lName, email, password }
     );
   }
 }

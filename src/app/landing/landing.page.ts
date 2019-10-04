@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { LoginPage } from '../auth/login/login.page';
+import { RegisterPage } from '../auth/register/register.page';
 
 @Component({
   selector: 'app-landing',
@@ -21,6 +22,13 @@ export class LandingPage implements OnInit {
       component: LoginPage
     });
     return await loginModal.present();
+  }
+
+  async register () {
+    const registerModal = await this.modalController.create({
+      component: RegisterPage
+    });
+    return await registerModal.present();
   }
 
 }

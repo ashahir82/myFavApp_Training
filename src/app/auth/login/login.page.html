@@ -1,27 +1,36 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
-    <ion-button slot="end" (click)="dismissModal()">
-      <ion-icon slot="icon-only" name="close"></ion-icon>
-    </ion-button>
+    <ion-title>Sign In</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="light" (click)="dismissModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
   <form #form="ngForm" (ngSubmit)="login(form)">
     <ion-item>
       <ion-icon slot="start" name="mail"></ion-icon>
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="email"></ion-input>
+      <ion-input type="email" ngModel name="email"></ion-input>
     </ion-item>
     <ion-item>
       <ion-icon slot="start" name="key"></ion-icon>
       <ion-label position="floating">Password</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" ngModel name="password"></ion-input>
     </ion-item>
-    <ion-button color="success" expand="block">
+    <ion-button color="success" expand="block" (click)="login(form)">
       <ion-icon slot="start" name="log-in"></ion-icon>
-      Click me
+      Sign In
     </ion-button>
   </form>
+  <ion-item>
+    <ion-label class="ion-text-center">Don't have an account?</ion-label>
+  </ion-item>
+  <ion-button color="danger" expand="block" (click)="registerModal()">
+    <ion-icon slot="start" name="create"></ion-icon>
+    Register
+  </ion-button>
 </ion-content>
