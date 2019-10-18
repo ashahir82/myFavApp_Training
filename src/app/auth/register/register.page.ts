@@ -4,6 +4,7 @@ import { ModalController, NavController } from '@ionic/angular';
 import { LoginPage } from '../login/login.page';
 import { AuthService } from 'src/app/services/auth.service';
 import { Navigation } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',

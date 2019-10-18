@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Recipe } from '../recipes/recipes.model';
+import { Recipe } from '../model/recipes.model';
 
 @Injectable({
   providedIn: 'root'
